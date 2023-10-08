@@ -1,0 +1,170 @@
+//========================================================================================================================================================
+
+.partner {
+  padding: rem(100) rem(0);
+
+  // !!! Тут можно переменные заюзать, но переделывать ненужно.
+
+  @media (max-width: $tablet) {
+    padding: rem(48) rem(0) rem(54);
+  }
+
+  @media (max-width: $mobile) {
+    padding: rem(24) rem(0) rem(32);
+  }
+
+  background: var(--backgrand-accent);
+  // .partner__container
+
+  &__container {
+  }
+
+  // partner__subtitle
+
+  &__subtitle {
+    margin-bottom: rem(48);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(32);
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  // .partner__row
+
+  &__row {
+    display: flex;
+    gap: rem(37);
+    margin: rem(48) rem(0) rem(0);
+
+    @media (min-width: $mobile) {
+      justify-content: space-between;
+    }
+    @media (max-width: $tablet) {
+      align-items: center;
+      margin: rem(32) rem(0) rem(0);
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: rem(32);
+    }
+  }
+
+  // .partner__column
+
+  &__column {
+  }
+
+  // .partner__content
+
+  &__content {
+    background: var(--wrht);
+    border-radius: rem(48);
+    padding: rem(42) rem(52) rem(54);
+    max-width: rem(840);
+
+    @media (min-width: $tablet) {
+      transition: all $time $tr 0.9s;
+      transform: translate(rem(-150), rem(0));
+      opacity: 0;
+    }
+    @media (max-width: $tablet) {
+      max-width: rem(350);
+      padding: rem(24);
+      border-radius: rem(24);
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+
+    @media (max-width: $mobileSmall) {
+      padding: rem(20);
+      border-radius: rem(16);
+    }
+  }
+
+  // partner__title
+
+  &__title {
+    margin-bottom: rem(16);
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  // .partner__text
+
+  &__text {
+    @media (max-width: $mobile) {
+      margin-bottom: rem(0);
+    }
+  }
+
+  // .partner__svg
+
+  &__svg {
+    @media (min-width: $tablet) {
+      transition: all $time $tr 1s;
+      transform: translate(rem(150), rem(0));
+      opacity: 0;
+    }
+    @media (min-width: $tablet) {
+      padding-top: rem(180);
+    }
+
+    svg {
+      object-fit: cover;
+      // !!! старайся избегать дробных чисел, просто округляй
+
+      width: rem(641.776);
+      height: rem(410.5);
+
+      max-width: 100%;
+      max-height: 100%;
+
+      @media (max-width: $tablet) {
+        width: rem(325);
+        height: rem(207.88);
+      }
+
+      @media (max-width: $mobileSmall) {
+        width: rem(238);
+        height: rem(152.233);
+      }
+    }
+  }
+
+  .partner__svg-icon01,
+  .partner__svg-icon03 {
+    position: relative;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    // animation: move01 15s linear infinite;
+    translate: animation 15s ease 0s;
+    offset-rotate: reverse 45deg;
+  }
+  .partner__svg-icon02 {
+    position: relative;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    // animation: move01 15s linear infinite reverse;
+    translate: animation 15s ease 0s;
+    offset-rotate: reverse 45deg;
+  }
+
+  @keyframes move01 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+//========================================================================================================================================================

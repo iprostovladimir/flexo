@@ -1,0 +1,79 @@
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"
+				style="--iconClose: url(./img/popup/01.svg);"></button>
+			<div class="mistake__question question-mistake">
+				<div class="question-mistake__title">contact us</div>
+				<form action="./forms/form.json" class="form" method="GET" data-ajax data-popup-message="#popup01">
+					<div class="form__row">
+						<div class="form__column js-clear">
+							<div class="form__label">Name<span>*</span></div>
+							<div class="form__validator js-clear-btn"
+								style="--iconClear: url(./img/popup/02.svg);--iconGood: url(./img/popup/03.svg);">
+								<input autocomplete="off" type="text" data-required data-validate name="form[]"
+									data-error="Incorrect Name" placeholder="Enter your name"
+									class="form__input input js-clear-input">
+							</div>
+						</div>
+						<div class="form__column js-clear">
+							<div class="form__label">e-mail<span>*</span></div>
+							<div class="form__validator js-clear-btn"
+								style="--iconClear: url(./img/popup/02.svg);--iconGood: url(./img/popup/03.svg);">
+								<input autocomplete="off" type="email" data-required="email" data-validate name="form[]"
+									data-error="Incorrect e-mail" placeholder="example@mail.com"
+									class="form__input input js-clear-input">
+							</div>
+						</div>
+						<div class="form__column js-clear">
+							<div class="form__label">company name</div>
+							<div class="form__validator js-clear-btn"
+								style="--iconClear: url(./img/popup/02.svg);--iconGood: url(./img/popup/03.svg);">
+								<input autocomplete="off" type="text" data-required data-validate name="form[]"
+									data-error="Incorrect company name" placeholder="Company"
+									class="form__input input js-clear-input">
+							</div>
+						</div>
+						<div class="form__column js-clear">
+							<div class="form__label">company website</div>
+							<div class="form__validator js-clear-btn"
+								style="--iconClear: url(./img/popup/02.svg);--iconGood: url(./img/popup/03.svg);">
+								<input autocomplete="off" type="url" data-required="url" data-validate name="form[]"
+									data-error="Incorrect url" placeholder="Enter company website"
+									class="form__input input js-clear-input">
+							</div>
+						</div>
+						<div class="form__column js-clear">
+							<div class="form__label">message<span>*</span></div>
+							<div class="form__validator js-clear-btn"
+								style="--iconClear: url(./img/popup/02.svg);--iconGood: url(./img/popup/03.svg);">
+								<textarea name="form[]" class="form__textarea input js-clear-input"
+									placeholder="Additional information"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="form__agreen">By clicking the button, I accept the <a href="javascript:void(0);">terms
+							of the
+							policy and user agreement</a></div>
+					<button type="submit" class="form__button btn">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="popup01" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close"
+				style="--iconClose: url(./img/popup/01.svg);"></button>
+			<div class="mistake__question question-mistake  question-thanks">
+				<div class="question-thanks--title">thanks!</div>
+				<div class="question-thanks--text">Your application is accepted. <br>
+					We will reply to you within <span>24 hours</span> <br> to your e-mail.</div>
+				<a href="home.html" class="question-thanks--btn btn">back to home page</a>
+			</div>
+		</div>
+	</div>
+</div>

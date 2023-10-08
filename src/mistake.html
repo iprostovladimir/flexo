@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="mistake">
+				<div class='mistake__container'>
+					<div class="big--text">404</div>
+					<h2 class="mistake__title _title">Page not found</h2>
+					<div class="mistake__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+						occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div class="mistake__question question-mistake">
+						<div class="question-mistake__title">have a question?</div>
+						<div class="question-mistake__text">We will reply to you within <span>24 hours</span></div>
+						<form action="./forms/form.json" class="form" method="GET" data-ajax
+							data-popup-message="#popup01">
+							<div class="form__column js-clear">
+								<div class="form__label">e-mail<span>*</span></div>
+								<div class="form__validator js-clear-btn"
+									style="--iconClear: url(./img/popup/02.svg);--iconGood: url(./img/popup/03.svg);">
+									<input autocomplete=" off" type="email" data-required="email" data-validate
+										name="form[]" data-error="Incorrect e-mail" placeholder="example@mail.com"
+										class="form__input input js-clear-input">
+								</div>
+							</div>
+							<div class="form__agreen">By clicking the button, I accept the <a
+									href="javascript:void(0);">terms of the
+									policy and user agreement</a></div>
+							<button type="submit" class="form__button btn">Submit</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

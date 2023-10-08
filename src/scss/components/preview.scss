@@ -1,0 +1,315 @@
+//========================================================================================================================================================
+.svgItem {
+  offset-path: path(
+    "M391.728 264.524C456.5 264.524 509.009 212.016 509.009 147.243C509.009 82.4712 456.5 29.9629 391.728 29.9629C326.956 29.9629 274.448 82.4712 274.448 147.243C274.448 212.016 326.956 264.524 391.728 264.524Z"
+  );
+  offset-rotate: auto 90deg;
+  animation: move 5s linear infinite 0.2s;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.main__svg-circle {
+  // animation: move01 15s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+  stroke-dashoffset: 737;
+  stroke-dasharray: 47.22 9.44;
+  animation: move02 10s linear infinite;
+}
+
+.sdfsdfsdfsdf {
+  transform-origin: center;
+  transform-box: fill-box;
+  stroke-dashoffset: 737;
+  stroke-dasharray: 47.22 9.44;
+  animation: move02 15s linear infinite reverse;
+}
+
+.main__svg-group01 {
+  // position: relative;
+  // transform-origin: center;
+  // transform-box: fill-box;
+  // animation: move01 15s linear infinite reverse;
+  // translate: all 15s ease 0s;
+  // translate: animation 15s ease 0s;
+}
+
+.main__svg-group {
+  position: relative;
+  //   transform-origin: center;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  // animation: move01 15s linear infinite;
+  translate: animation 15s ease 0s;
+  offset-rotate: reverse 45deg;
+}
+
+.main__svg-icon {
+  //   offset-path: path(
+  //     "M493.728 264.524C456.5 264.524 509.009 212.016 509.009 147.243C509.009 82.4712 456.5 29.9629 391.728 29.9629C326.956 29.9629 274.448 82.4712 274.448 147.243C274.448 212.016 326.956 264.524 391.728 264.524Z"
+  //   );
+  offset-rotate: auto 45deg;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  animation: move01 15s linear infinite reverse;
+  ._is-firefox & {
+    animation: none;
+  }
+}
+@keyframes move02 {
+  0% {
+    stroke-dashoffset: 737;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes move01 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes bgUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.main__svg-bg {
+  transform: scale(0.5);
+  // animation: bgUp 0.5s linear 0.5s both;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  opacity: 0;
+}
+//========================================================================================================================================================
+.main {
+  padding: rem(80) rem(0);
+
+  @media (max-width: $tablet) {
+    padding: rem(48) rem(0);
+  }
+
+  @media (max-width: $mobile) {
+    padding: rem(24) rem(0);
+  }
+  // .main__container
+
+  &__container {
+  }
+
+  // .main__row
+
+  &__row {
+    @media (min-width: $tablet) {
+      display: flex;
+      gap: rem(30);
+    }
+  }
+
+  // .main__column
+
+  &__column {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: rem(56);
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: rem(23);
+    }
+
+    &:last-child {
+      margin-bottom: rem(0);
+    }
+  }
+
+  // .main__title
+
+  &__title {
+    font-weight: 500;
+    line-height: 125%;
+    letter-spacing: rem(1.44);
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: rem(24);
+    font-size: rem(72);
+
+    @media (min-width: $tablet) {
+      transform: translate(rem(0), rem(50));
+      opacity: 0;
+      transition: all $time $tr 0s;
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(48);
+      margin-bottom: rem(16);
+      letter-spacing: rem(0.96);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(30);
+      margin-bottom: rem(8);
+      letter-spacing: rem(0.6);
+    }
+    span {
+      color: var(--blue);
+      display: block;
+    }
+  }
+
+  // .main__text
+
+  &__text {
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: rem(64);
+    font-size: rem(24);
+    color: var(--gray);
+
+    @media (min-width: $tablet) {
+      transform: translate(rem(0), rem(50));
+      opacity: 0;
+      transition: all $time $tr 0.3s;
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(18);
+      margin-bottom: rem(40);
+    }
+
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+      margin-bottom: rem(24);
+      max-width: rem(200);
+    }
+  }
+
+  // .main__link
+
+  &__link {
+    padding: rem(28) rem(54);
+    border-radius: rem(63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(18);
+
+    position: relative;
+
+    @media (min-width: $tablet) {
+      transform: translate(rem(0), rem(50));
+      opacity: 0;
+      transition: all $time $tr 0.6s;
+    }
+    &::after {
+      content: "";
+      width: rem(24);
+      height: rem(24);
+      mask: var(--icon) center center no-repeat;
+      -webkit-mask: var(--icon) center center no-repeat;
+      background: var(--wrht);
+      transform: translate(rem(10), rem(0));
+      transition: transform $time $tr 0s;
+
+      @media (max-width: $tablet) {
+        transform: translate(rem(5), rem(0));
+      }
+    }
+
+    @media (min-width: $mobileSmall) {
+      display: inline-flex;
+    }
+
+    @media (max-width: $tablet) {
+      padding: rem(19.5) rem(28);
+      font-size: rem(14);
+    }
+
+    @media (max-width: $mobile) {
+      padding: rem(8) rem(20);
+      font-size: rem(12);
+      width: 100%;
+      max-width: rem(252);
+    }
+
+    &:hover {
+      @media (min-width: $tablet) {
+        &::after {
+          transform: translate(rem(15), rem(0));
+        }
+      }
+    }
+  }
+
+  // .main__svg
+
+  &__svg {
+    width: rem(564);
+    isolation: isolate;
+    height: rem(451);
+
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (min-width: $tablet) {
+      transform: translate(rem(150), rem(0));
+      opacity: 0;
+      transition: all $time $tr 0.3s;
+    }
+
+    @media (max-width: $tablet) {
+      width: rem(408);
+      height: rem(326);
+    }
+    @media (max-width: $mobileSmall) {
+      width: rem(238);
+      height: rem(190);
+    }
+  }
+
+  // .main__svg-bg
+
+  &__svg-bg {
+  }
+
+  // .main__svg-group01
+
+  &__svg-group01 {
+  }
+
+  // .main__svg-group
+
+  &__svg-group {
+  }
+
+  // .main__svg-circle
+
+  &__svg-circle {
+  }
+
+  // .main__svg-icon
+
+  &__svg-icon {
+  }
+}
+
+//========================================================================================================================================================

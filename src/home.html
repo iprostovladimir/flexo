@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="_loaded" style="position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s ease 0s;
+	z-index: 100;
+	opacity: 1;
+	pointer-events: none;
+	background: #F8F9FB url(./img/header/logo.svg) center center/ 250px 250px no-repeat">
+	</div>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			@@include('html/_preview.htm',{})
+			@@include('html/_technologies.htm',{})
+			@@include('html/_partner.htm',{})
+			@@include('html/_payment.htm',{})
+			@@include('html/_about.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

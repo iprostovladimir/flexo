@@ -1,0 +1,70 @@
+//<INPUT>
+// Снипет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+.input {
+  width: 100%;
+  display: block;
+  padding: rem(20) rem(45) rem(20) rem(24);
+  border: rem(1) solid var(--gray-light);
+  border-radius: rem(24) !important;
+  background: var(--wrht);
+  height: rem(72);
+  transition: border 0.5s ease 0s;
+  cursor: pointer;
+
+  font-size: rem(20);
+  line-height: 160%;
+  color: var(--gray-light);
+
+  @media (max-width: $tablet) {
+    font-size: rem(16);
+    padding: rem(14) rem(45) rem(14) rem(15);
+    height: rem(54);
+  }
+
+  @media (max-width: $mobileSmall) {
+    height: rem(42);
+    font-size: rem(14);
+    padding: rem(10) rem(35) rem(10) rem(14);
+    border-radius: rem(12) !important;
+  }
+  &::placeholder {
+    font-size: rem(20);
+    line-height: 160%;
+    color: var(--gray-light);
+
+    @media (max-width: $tablet) {
+      font-size: rem(16);
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: rem(14);
+    }
+  }
+
+  &:hover {
+    border: rem(1) solid var(--blueBlack);
+  }
+
+  &._form-focus {
+    border: rem(1) solid var(--blueBlack);
+  }
+
+  &._form-error {
+    border: rem(1) solid var(--red);
+    color: var(--red);
+  }
+}
+textarea.input {
+  resize: none;
+  //   padding: 0px 0px;
+}
